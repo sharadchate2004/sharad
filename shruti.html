@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.letter {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background: #fff3e6;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Love Letter</h1>
+        <div class="letter" id="loveLetter"></div>
+        <button onclick="generateLoveLetter()">Generate Love Letter</button>
+    </div>
+	<script>
+function generateLoveLetter() {
+    const crushName = "Emily"; // Customize the name
+    const favoriteQuality = "kindness"; // Customize the quality
+    const sharedMemory = "laughed together under the stars"; // Customize the memory
+    const emotion = "joyful"; // Customize the emotion
+    const yourName = "Your Name"; // Customize your name
+
+    const letter = `
+    Dear ${Shruti},
+
+    I hope this letter finds you in great spirits. I've been wanting to share my feelings with you for a while now.
+
+    Your ${favoriteQuality} always amazes me and truly lights up my day.
+
+    I often think about the time we ${sharedMemory}. That moment made me realize how special you are to me.
+
+    Every time I see you, I feel ${emotion}. You have a way of making everything better.
+
+    I hope we can create more wonderful memories together.
+
+    With all my heart,
+    ${sharad}
+    `;
+
+    document.getElementById("loveLetter").innerText = letter;
+}
+	
+</script>
+</body>
+</html>
