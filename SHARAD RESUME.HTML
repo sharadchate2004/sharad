@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .bio {
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+        h3, h4 {
+            background-color: DodgerBlue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 525px;
+        }
+        p {
+            font-weight: bold;
+        }
+        .contact-info, .social-links {
+            margin-top: 15px;
+        }
+        .project-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="sharad chate.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Sharad Chate</h2>
+            <p>App Developer</p>
+            <a href="#" class="btn btn-primary">Follow</a>
+        </div>
+        <div class="col-md-8">
+            <h3>About Me</h3>
+            <p class="bio">I am a passionate web developer with experience in creating dynamic web applications. I love coding, learning new technologies, and contributing to open-source projects.</p>
+            <h4>Contact</h4>
+            <ul class="list-unstyled contact-info" style="font-weight: bold;">
+                <li>Email: sharadchate2004@gmail.com</li>
+                <li>Phone: (+91)9371902926</li>
+            </ul>
+            <h4>Links</h4>
+            <ul class="list-inline social-links">
+                <li class="list-inline-item"><a href="#" class="btn btn-link">LinkedIn</a></li>
+                <li class="list-inline-item"><a href="#" class="btn btn-link">GitHub</a></li>
+                <li class="list-inline-item"><a href="#" class="btn btn-link">Twitter</a></li>
+            </ul>
+            <h4>My Work</h4>
+            <div id="project-list" class="row">
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">A brief description of Project 1.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('Project 1', 'This is a detailed description of Project 1.')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">A brief description of Project 2.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('Project 2', 'This is a detailed description of Project 2.')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">A brief description of Project 3.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('Project 3', 'This is a detailed description of Project 3.')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="projectModalBody">
+                Project details will go here.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showProjectDetails(title, details) {
+        document.getElementById('projectModalLabel').innerText = title;
+        document.getElementById('projectModalBody').innerText = details;
+        $('#projectModal').modal('show');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
